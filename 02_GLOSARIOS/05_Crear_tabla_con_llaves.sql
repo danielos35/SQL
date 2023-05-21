@@ -30,3 +30,29 @@ usuario_id bigint not null,
 fecha_new datetime
 );
 
+
+USE _Anamic_Desarrollo;
+SELECT * FROM levantamientos_restricciones;
+SELECT * FROM cancelaciones_saldos;
+SELECT * FROM cartas_saldos
+
+
+SELECT * FROM clientes;
+SELECT * FROM clientes_estados;
+SELECT * FROM instituciones;
+SELECT * FROM estados_base;
+SELECT * FROM cancelaciones_saldos_estados;
+SELECT * FROM cancelaciones_saldos_revisiones_adjuntos;
+SELECT * FROM estados_base;
+SELECT * FROM cartas_saldos_anulaciones;
+SELECT * FROM omitidos;
+
+SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'omitidos'
+
+Create table omitidos_revisiones_adjuntos(
+adjunto_id int primary key,
+omitidos_id bigint not null,
+usuario_id bigint not null,
+fecha_new datetime
+);
+
